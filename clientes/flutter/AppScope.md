@@ -18,7 +18,8 @@ Mecanismo central de injeção de dependências do aplicativo, implementado como
    - `deckService`: [[DeckService]]
    - `userProgressController`: [[UserProgressController]]
    - `reviewService`: [[ReviewService]]
-2. Disponibilizar o método de conveniência estático `AppScope.of(context)`.
+   - `authService`: Gerenciador de autenticação, sessão e perfil do usuário
+2. Disponibilizar o método de conveniência estático `AppScope.of(context)` e o getter `requireAuthService`.
 3. Determinar se os filhos precisam ser reconstruídos (`updateShouldNotify`).
 
 ---
@@ -30,12 +31,14 @@ class AppScope extends InheritedWidget {
   final DeckService deckService;
   final UserProgressController userProgressController;
   final ReviewService reviewService;
+  final AuthService? authService;
 
   const AppScope({
     super.key,
     required this.deckService,
     required this.userProgressController,
     required this.reviewService,
+    this.authService,
     required super.child,
   });
 
@@ -45,11 +48,20 @@ class AppScope extends InheritedWidget {
     return scope!;
   }
 
+  AuthService get requireAuthService {
+    final service = authService;
+    if (service == null) {
+      throw StateError('AuthService not provided to AppScope');
+    }
+    return service;
+  }
+
   @override
   bool updateShouldNotify(AppScope oldWidget) {
     return deckService != oldWidget.deckService ||
         userProgressController != oldWidget.userProgressController ||
-        reviewService != oldWidget.reviewService;
+        reviewService != oldWidget.reviewService ||
+        authService != oldWidget.authService;
   }
 }
 ```

@@ -1,6 +1,6 @@
 {
-  "total_files": 70,
-  "total_classes": 74,
+  "total_files": 76,
+  "total_classes": 82,
   "screens": [
     [
       "StreakScreen",
@@ -183,6 +183,10 @@
       "lib/core/progress/controllers/user_progress_controller.dart"
     ],
     [
+      "AuthService",
+      "lib/core/auth/services/auth_service.dart"
+    ],
+    [
       "ReviewService",
       "lib/core/review/review_service.dart"
     ]
@@ -215,6 +219,14 @@
     [
       "UserProgress",
       "lib/core/progress/models/user_progress.dart"
+    ],
+    [
+      "AuthTokens",
+      "lib/core/auth/models/auth_tokens.dart"
+    ],
+    [
+      "AuthUser",
+      "lib/core/auth/models/auth_user.dart"
     ]
   ],
   "enums": [

@@ -1,6 +1,6 @@
 {
-  "total_files": 76,
-  "total_classes": 82,
+  "total_files": 82,
+  "total_classes": 95,
   "screens": [
     [
       "StreakScreen",
@@ -19,6 +19,10 @@
       "lib/features/decks/screens/deck_details_screen.dart"
     ],
     [
+      "AdminDashboardScreen",
+      "lib/features/admin/screens/admin_dashboard_screen.dart"
+    ],
+    [
       "FlashcardSessionScreen",
       "lib/features/flashcards/screens/flashcard_session_screen.dart"
     ],
@@ -33,6 +37,18 @@
     [
       "HomeScreen",
       "lib/features/home/screens/home_screen.dart"
+    ],
+    [
+      "LoginScreen",
+      "lib/core/auth/screens/login_screen.dart"
+    ],
+    [
+      "ProfileScreen",
+      "lib/core/auth/screens/profile_screen.dart"
+    ],
+    [
+      "RegisterScreen",
+      "lib/core/auth/screens/register_screen.dart"
     ]
   ],
   "widgets": [
@@ -67,6 +83,14 @@
     [
       "DeckStatesHelpBottomSheet",
       "lib/features/decks/widgets/deck_states_help_bottom_sheet.dart"
+    ],
+    [
+      "_MetricCard",
+      "lib/features/admin/screens/admin_dashboard_screen.dart"
+    ],
+    [
+      "_AdminActionTile",
+      "lib/features/admin/screens/admin_dashboard_screen.dart"
     ],
     [
       "SessionHeader",
@@ -143,6 +167,18 @@
     [
       "HomeScreenContent",
       "lib/features/home/screens/home_screen.dart"
+    ],
+    [
+      "ChangePasswordDialog",
+      "lib/core/auth/widgets/change_password_dialog.dart"
+    ],
+    [
+      "AuthGate",
+      "lib/core/auth/widgets/auth_gate.dart"
+    ],
+    [
+      "_RoleBadge",
+      "lib/core/auth/screens/profile_screen.dart"
     ]
   ],
   "services": [

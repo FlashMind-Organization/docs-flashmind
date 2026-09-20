@@ -19,7 +19,7 @@ Ele mantém contratos de domínio, especificações detalhadas de cada tela e co
 2. Na tela inicial (ou no menu de cofres), clique em **"Open folder as vault"** (*Abrir pasta como cofre*).
 3. Selecione o diretório desta pasta:
    ```text
-   /home/jonas/Projects/flashmind/docs-flashmind
+   flashmind/docs-flashmind
    ```
 4. Utilize a nota **`_indice.md`** ou abra a visualização em grafo (**Ctrl + G** ou **Graph View**) para explorar as conexões conceituais entre modelos, telas e serviços.
 
